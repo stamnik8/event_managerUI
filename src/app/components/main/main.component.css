@@ -1,0 +1,52 @@
+.heading h1 {
+    color: white;
+    font-size: 50px;
+    font-size: 700;
+    margin-bottom: 20px;
+}
+
+.heading h3 {
+    margin: 10px 0 100px;
+    color: white;
+}
+
+.mainDiv {
+    text-align: center;
+    height: 80vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mainButton {
+    margin-top: 40px;
+    background: white;
+    color: black;
+    border-radius: 5px;
+    padding: 10px 50px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.mainButton:hover {
+    background: linear-gradient(45deg, #1C2437, #455880);
+    color: white;
+    border-color: black;
+    text-decoration: none;
+    transition: 0.7s ease-in;
+    font-weight: bold;
+}
+
+.heading {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.arrowButton {
+    height: 100px;
+    width: auto;
+    margin-top: 50px;
+}

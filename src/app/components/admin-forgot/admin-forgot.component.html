@@ -1,0 +1,29 @@
+<app-header></app-header>
+<div class="container">
+
+  <div class="tabs">
+    <div class="tabsButtons">
+      <button class="tabButton" routerLink="/admin_profile">Reports</button>
+      <button class="tabButton" routerLink="/admin_forgot">Reset Password</button>
+    </div>
+  </div>
+
+  <table class="rwd-table" *ngIf="reportTab">
+    <tr>
+      <th>Username</th>
+      <th>Name</th>
+      <th>Surname</th>
+      <th>Reset Password</th>
+    </tr>
+
+    <tr *ngFor="let report of passReport; let i=index;">
+      <td data-th="Movie Title">{{report.username}}</td>
+      <td data-th="Movie Title">{{report.firstName}}</td>
+      <td data-th="Movie Title">{{report.lastName}}</td>
+      <td>
+        <button *ngIf="report.forgotPassword" class="btn btn-dark cancelBtn" (click)="resetUsersPass(report.id)">Reset</button>
+      </td>
+    </tr>
+  </table>
+</div>
+

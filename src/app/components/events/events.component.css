@@ -1,0 +1,50 @@
+.eventSection {
+    padding: 80px 0;
+    background: linear-gradient(45deg, #1C2437, #455880);
+}
+
+.eventList {
+    margin-top: 40px;
+    color: white !important;
+    background-color: black;
+}
+
+.detailsEventSection {
+    padding: 20px 0 10px;
+}
+
+.eventList img {
+    max-height: 200px;
+    padding: 15px;
+}
+
+.eventList p {
+    display: inline;
+}
+
+.card__outer {
+    background: linear-gradient(45deg, #1C2437, #455880);
+    position: relative;
+    top: 0;
+    border-radius: 2px;
+    transition: all .2s ease-in-out 0s;
+}
+
+.card__outer:hover {
+    background: #07070764;
+    box-shadow: 0 6px 40px rgba(171, 171, 171, 0.2);
+    top: -4px;
+}
+
+.buyNowbtn {
+    background: white !important;
+    padding: 20px 50px;
+    color: black;
+    font-weight: bold;
+}
+
+.card__outer:hover .buyNowbtn {
+    color: white;
+    font-weight: bold;
+    background: #252525 !important;
+}

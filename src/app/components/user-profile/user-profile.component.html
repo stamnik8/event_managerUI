@@ -1,0 +1,28 @@
+<app-header></app-header>
+
+<div class="container">
+  <h1>My Reservations</h1>
+  <table class="rwd-table">
+    <tr>
+      <th>Tickets</th>
+      <th>Date</th>
+      <th>Category</th>
+      <th>Event Name</th>
+      <th>Status</th>
+      <th>Cancel Reservation</th>
+    </tr>
+
+    <tr *ngFor="let report of reservations; let i=index;">
+      <td data-th="Movie Title">{{report.count}}</td>
+      <td data-th="Genre">{{report.date | date}}</td>
+      <td>{{report.category}}</td>
+      <td data-th="Year">{{report.eventName}}</td>
+      <td data-th="Gross" id="status{{i+1}}">
+        <span>{{report.status}}</span>
+      </td>
+      <td>
+        <button *ngIf="report.status === 'RESERVED'" class="btn btn-dark cancelBtn" (click)="cancelReservation(report.id,i+1)">CANCEL</button>
+      </td>
+    </tr>
+  </table>
+</div>

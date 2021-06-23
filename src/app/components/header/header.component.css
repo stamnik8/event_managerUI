@@ -1,0 +1,126 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+nav {
+    height: 120px;
+    background-color: #1d1d1d !important;
+    padding: 0 4rem;
+}
+
+.logoImage {
+    max-height: 90px;
+    width: auto;
+}
+
+nav ul {
+    font-size: 24px;
+}
+
+nav ul li a {
+    color: white !important;
+    font-size: 20px;
+}
+
+nav ul li a:hover {
+    color: #4397cd !important;
+}
+
+/* Shopping Cart Css  */
+
+.container2 {
+    margin: 0 auto;
+    width: 95%;
+}
+
+.shopping-cart {
+    margin: 20px 0;
+    float: right;
+    background: white;
+    width: 320px;
+    position: relative;
+    border-radius: 3px;
+    padding: 20px;
+    z-index: 999;
+}
+
+.shopping-cart .shopping-cart-header {
+    border-bottom: 1px solid #E8E8E8;
+    padding-bottom: 15px;
+}
+
+.shopping-cart .shopping-cart-header .shopping-cart-total {
+    float: right;
+}
+
+.shopping-cart .shopping-cart-items {
+    padding-top: 20px;
+    padding-left: 0;
+    font-size: 16px;
+}
+
+.shopping-cart .shopping-cart-items li {
+    margin-left: 25px;
+    margin-bottom: 18px;
+}
+
+.shopping-cart .shopping-cart-items img {
+    float: left;
+    margin-right: 12px;
+}
+
+.shopping-cart .shopping-cart-items .item-name {
+    display: block;
+    padding-top: 10px;
+    font-size: 16px;
+}
+
+.shopping-cart .shopping-cart-items .item-price {
+    color: #6394F8;
+    margin-right: 8px;
+}
+
+.shopping-cart .shopping-cart-items .item-quantity {
+    color: #ABB0BE;
+    font-size: 16px;
+}
+
+.shopping-cart:after {
+    bottom: 100%;
+    left: 89%;
+    border: solid transparent;
+    content: "";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-bottom-color: white;
+    border-width: 8px;
+    margin-left: -8px;
+}
+
+.buttonCart {
+    background: #515783;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    display: block;
+    border-radius: 3px;
+    font-size: 16px;
+    margin: 25px 0 15px 0;
+}
+
+.buttonCart:hover {
+    background: #729ef9;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}

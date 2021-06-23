@@ -1,0 +1,32 @@
+<app-header></app-header>
+<div class="container reportsAdmin">
+
+  <!-- <div class="tabs">
+    <div class="tabsButtons">
+      <button class="tabButton" routerLink="/admin_profile">Reports</button>
+      <button class="tabButton" routerLink="/admin_forgot">Reset Password</button>
+    </div>
+  </div> -->
+  <table class="rwd-table">
+    <tr>
+      <th>Tickets</th>
+      <th>Category</th>
+      <th>Date</th>
+      <th>Username</th>
+      <th>Event Name</th>
+      <th>Status</th>
+      <th>Cancel Reservation</th>
+    </tr>
+   
+    <tr *ngFor="let report of reports; let i=index;"> 
+      <td data-th="Movie Title">{{report.count}}</td>
+      <td data-th="Movie Title">{{report.category}}</td>
+      <td data-th="Movie Title">{{report.date | date}}</td>
+      <td data-th="Genre">{{report.userName}}</td>
+      <td data-th="Year">{{report.eventName}}</td>
+      <td data-th="Gross" id="status{{i+1}}"><span>{{report.status}}</span></td>
+      <td><button *ngIf="report.status === 'RESERVED'" class="btn btn-dark cancelBtn" (click)="cancelReservation(report.id,i+1)">CANCEL</button></td>
+    </tr>
+  </table>
+</div>
+

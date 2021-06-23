@@ -1,0 +1,34 @@
+<div class="eventSection" id="event">
+  <div class="container">
+    <div *ngFor="let event of events">
+      <div class="row eventList card__outer">
+        <div class="offset-1 col-10 eventListCol">
+          <div class="row">
+            <div class="col-4 align-self-center">
+              <img class="img-fluid" [src]="event.imgUrl" alt="eventBanner">
+            </div>
+            <div class="offset-1 col-5 detailsEventSection">
+              <h5>
+                <b>{{event.eventName}},{{event.category}}</b>
+              </h5>
+              <p>
+                <img src="assets/image/events/placeholder.png" alt="GPS Location">{{event.location}}</p>
+              <br>
+              <p>
+                <img src="assets/image/events/sun.png" alt="GPS Location">{{event.weather}}</p>
+              <br>
+              <p>
+                <img src="assets/image/events/time.png" alt="GPS Location">
+                {{event.date | date}}
+              </p>
+            </div>
+            <div class="col-2 align-self-center">
+              <button class="btn btn-dark buyNowbtn" routerLink="/tickets/{{event.id}}" *ngIf="user">BUY NOW</button>
+              <button class="btn btn-dark buyNowbtn" routerLink="/register" *ngIf="!user">JOIN NOW</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

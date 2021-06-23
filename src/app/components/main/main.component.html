@@ -1,0 +1,12 @@
+<div class="row mainDiv">
+  <div class="col-12">
+    <div class="heading">
+      <h1>Event Manager Service</h1>
+      <h3>Join us now to get your tickets for all the events</h3>
+      <a *ngIf="!user"  class="mainButton" routerLink="/register">Join Now</a><br>
+      <a *ngIf="user && !user.isAdmin" class="mainButton" routerLink="/user_profile">My Reservations</a>
+      <a *ngIf="user && user.isAdmin" class="mainButton" routerLink="/admin_profile">Get Reports</a>
+      <br>
+    </div>
+  </div>
+</div>

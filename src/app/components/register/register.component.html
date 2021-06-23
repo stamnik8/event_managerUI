@@ -1,0 +1,37 @@
+<app-header></app-header>
+<div class="registerSection">
+  <div class="loginSection">
+    <div class="wrapper fadeInDown">
+      <div id="formContent">
+        <!-- Tabs Titles -->
+        <h2 class="inactive underlineHover" routerLink="/login">Sign In</h2>
+        <h2 class="active" routerLink="/register">Sign Up</h2>
+
+        <p class="errorServer" *ngIf="error">
+          {{error | uppercase}}
+        </p>
+  
+        <!-- Sign Up Form -->
+        <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+          <input formControlName="username" type="text" id="username" class="fadeIn second" placeholder="Username">
+          <input formControlName="firstName" type="text" id="firstname" class="fadeIn third" placeholder="First Name">
+          
+          <input formControlName="lastName" type="text" id="lastname" class="fadeIn third" placeholder="Last Name">
+          
+          <input formControlName="email" type="email" id="email" class="fadeIn third" placeholder="example@example.com">
+          <span class="errors" *ngIf="email.invalid && email.touched">
+            Your email does not look right
+          </span>
+          <input formControlName="password" type="password" id="password" class="fadeIn third" placeholder="Password">
+          <span class="errors" *ngIf="password.invalid && password.touched">
+            Password is weak.<br>
+          </span>
+          <input type="submit" class="fadeIn fourth cursorButton" value="Sign Up" [disabled]="!addForm.valid">
+        </form>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+

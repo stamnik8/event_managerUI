@@ -1,0 +1,39 @@
+<app-header [cart]="cart" [ticketCounter]="ticketCounter" [cost]="cost"></app-header>
+<div class="ticketSection">
+    <div class="container">
+        <div class="row eventDescription">
+            <div class="col-4 ">
+                <h2>{{event.eventName}}</h2>
+            </div>
+            <div class="col-4 text-center">
+                <img src="assets/image/events/date.png" alt="dateIcon">
+                <h2 class="eventsSpan">{{event.date | date}}</h2>
+            </div>
+            <div class="col-4 text-right">
+                <img src="assets/image/events/sunBig.png" alt="weatherIcon">
+                <h2 class="eventsSpan">{{event.weather}}</h2>
+            </div>
+        </div><hr>
+        <div class="row">
+            <div class="col-6 offset-3">
+                
+                <div *ngFor="let ticket of tickets">
+                   <span [ngClass]="{'box' : true, 'box1 ': (ticket.type==='VIP'), 'box2': (ticket.type==='Economy'), 'box3': (ticket.type==='Standard')}">
+                        <img src="./assets/image/tickets/COLOR 1.png" width="100%" *ngIf="(ticket.type==='VIP')">
+                        <img src="./assets/image/tickets/COLOR 2.png" width="100%" *ngIf="(ticket.type==='Economy')">
+                        <img src="./assets/image/tickets/COLOR 3.png" width="100%" *ngIf="(ticket.type==='Standard')">
+                        <span class="title">{{ticket.type}}</span>
+                        <span class="price">$<font size="7">{{ticket.cost}}</font><br>
+                            <font size="1">Tickets left:  {{ticket.pool_size}}</font>
+                            <span *ngIf="ticket.pool_size<10"><br>Hurry up</span>
+                        </span>
+                        <span class="bigPrice">{{ticket.cost}}</span>
+                        <span *ngIf="ticket.pool_size>0" class="btnTicket" title="Add to cart" (click)="addToCart(ticket, event)">+</span>
+                    </span>
+            </div>
+            </div>
+            <!-- <button (click)="resetStorage()">Reset Local</button> -->
+        </div>
+    </div>
+</div>
+

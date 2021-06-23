@@ -1,0 +1,168 @@
+.ticketSection {
+    height: calc(100vh - 120px);
+    width: 100%;
+    background: linear-gradient(45deg, #1C2437, #455880);
+    position: absolute;
+    z-index: -1;
+}
+
+.eventDescription {
+    color: white;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.eventDescription h1 {
+    font-weight: bold !important;
+}
+
+.eventDescription h2 {
+    display: inline;
+    line-height: 50px;
+}
+
+.eventDescription img {
+    height: 38px;
+    margin: 0 10px 15px;
+}
+
+.eventsSpan {
+    color: white;
+}
+
+hr {
+    display: block;
+    margin: 0 auto;
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #ccc, #ccc);
+}
+
+.box {
+    height: 350px;
+    width: 250px;
+    background-color: white;
+    border-radius: 10px;
+    position: absolute;
+    top: 250px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    transition: all 0.3s ease-in-out;
+}
+
+.box:hover {
+    z-index: 10000;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.box1 {
+    box-shadow: 0px 0px 80px 5px rgba(107, 103, 251, .3);
+}
+
+.box2 {
+    height: 300px;
+    left: 10%;
+    z-index: 99;
+}
+
+.box3 {
+    height: 300px;
+    left: 92%;
+    z-index: 99;
+}
+
+.box img {
+    border-radius: 10px;
+}
+
+.title {
+    font-family: arial;
+    font-size: 40px;
+    color: #47577B;
+    font-weight: bold;
+    letter-spacing: -2px;
+    position: absolute;
+    top: 10px;
+    left: 5px;
+}
+
+.box3 .title {
+    left: 35%;
+}
+
+.price {
+    font-family: arial;
+    font-size: 25px;
+    color: #47577B;
+    display: block;
+    font-weight: bold;
+    line-height: 20px;
+    position: relative;
+    top: 40px;
+    left: 40px;
+    z-index: 99;
+}
+
+.box2 .price,
+.box3 .price {
+    top: 0px;
+}
+
+.bigPrice {
+    font-family: monospace;
+    font-size: 130px;
+    color: #8E53FB;
+    letter-spacing: -10px;
+    font-weight: bold;
+    display: block;
+    opacity: 0.1;
+    position: relative;
+    top: -70px;
+    left: 60px;
+    z-index: 9;
+}
+
+.box2 .bigPrice {
+    font-size: 110px;
+    top: -100px;
+    color: #2695CA;
+    letter-spacing: -5px;
+}
+
+.box3 .bigPrice {
+    font-size: 110px;
+    top: -100px;
+    color: #FA8176;
+    letter-spacing: -5px;
+}
+
+.btnTicket {
+    height: 40px;
+    width: 40px;
+    background: linear-gradient(45deg, #6B67FB, #AC47F8);
+    font-family: arial;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 1px rgba(172, 71, 248, .5);
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    z-index: 10;
+}
+
+.box2 .btnTicket {
+    background: linear-gradient(45deg, #1898C7, #5DE2D4);
+    box-shadow: 0 0 10xp 1px rgba(93, 226, 212, .5);
+}
+
+.box3 .btnTicket {
+    background: linear-gradient(45deg, #F47288, #F8AA9B);
+    box-shadow: 0 0 10xp 1px rgba(248, 170, 155, .5);
+}

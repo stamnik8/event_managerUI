@@ -1,0 +1,23 @@
+<app-header></app-header>
+<div class="resetSection">
+  <div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+      <h2>Reset Your Password</h2>
+
+      <p class="errorServer" *ngIf="error">
+        {{error | uppercase}}
+      </p>
+      <!-- Icon -->
+      <div class="fadeIn first">
+        <img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" />
+      </div>
+
+      <!-- Login Form -->
+      <form [formGroup]="resetForm" (ngSubmit)="onSubmit()">
+        <input formControlName="username" type="text" id="resetPassword" class="fadeIn second" placeholder="Type your Username" required>
+        <input type="submit" class="fadeIn fourth cursorButton" value="Reset Password" [disabled]="!resetForm.valid">
+      </form>
+    </div>
+  </div>
+</div>

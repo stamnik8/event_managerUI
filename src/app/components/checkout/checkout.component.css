@@ -1,0 +1,231 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100%;
+    font-family: 'Open sans', sans-serif;
+}
+
+body {
+    background: linear-gradient(50deg, #f3c680, #a1e3e2);
+}
+
+.checkoutSection {
+    background: linear-gradient(45deg, #1C2437, #455880);
+    height: calc(100vh - 120px);
+}
+
+.headerCheckout {
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: bold;
+}
+
+.headerCheckout span {
+    color: #bded7d;
+}
+
+.headerCheckout img {
+    margin: 0 auto;
+    display: block;
+    padding: 0 0 20px;
+}
+
+/*-----------------
+---
+Spinner & Check Div
+--------------------*/
+
+.spinner mat-spinner {
+    display: block;
+    margin: 0 auto;
+}
+
+.spinner p {
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    margin: 50px 10px;
+}
+
+.checkTransDone img {
+    display: block;
+    margin: 0 auto;
+}
+
+.checkTransDone p {
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    margin: 20px 10px;
+}
+
+/*-----------------
+---
+Buttons
+--------------------*/
+
+.btn {
+    display: block;
+    background: #bded7d;
+    color: white;
+    text-decoration: none;
+    margin: 20px 0;
+    padding: 15px 15px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all .2s ease-in-out;
+    box-shadow: inset 0 3px 0 rgba(0, 0, 0, 0), 0 3px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.btn:hover::after {
+    background: rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 3px 0 rgba(0, 0, 0, 0.2);
+}
+
+/*--------------------
+Form
+--------------------*/
+
+.form fieldset {
+    border: none;
+    padding: 0;
+    padding: 10px 0;
+    position: relative;
+    clear: both;
+}
+
+.form fieldset.fieldset-expiration {
+    float: left;
+    width: 60%;
+}
+
+.form fieldset.fieldset-expiration .select {
+    width: 84px;
+    margin-right: 12px;
+    float: left;
+}
+
+.form fieldset.fieldset-ccv {
+    clear: none;
+    float: right;
+    width: 86px;
+}
+
+.form fieldset label {
+    display: block;
+    text-transform: uppercase;
+    font-size: 11px;
+    color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-family: Inconsolata;
+}
+
+.form fieldset input,
+.form fieldset .select {
+    width: 100%;
+    height: 38px;
+    color: #333333;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    outline: none !important;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.form fieldset input.input-cart-number,
+.form fieldset .select.input-cart-number {
+    width: 82px;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.form fieldset input.input-cart-number:last-child,
+.form fieldset .select.input-cart-number:last-child {
+    margin-right: 0;
+}
+
+.form fieldset .select {
+    position: relative;
+}
+
+.form fieldset .select::after {
+    content: '';
+    border-top: 8px solid #222;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    position: absolute;
+    z-index: 2;
+    top: 14px;
+    right: 10px;
+    pointer-events: none;
+}
+
+.form fieldset .select select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: absolute;
+    padding: 0;
+    border: none;
+    width: 100%;
+    outline: none !important;
+    top: 6px;
+    left: 6px;
+    background: none;
+}
+
+.form fieldset .select select :-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+}
+
+.form button {
+    width: 100%;
+    outline: none !important;
+    background: linear-gradient(180deg, #49a09b, #3d8291);
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    box-shadow: none;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    margin-top: 90px;
+}
+
+.form button .fa {
+    margin-right: 6px;
+}
+
+/*--------------------
+Checkout
+--------------------*/
+
+.checkout {
+    margin: 0 auto;
+    position: absolute;
+    width: 460px;
+    background: white;
+    border-radius: 15px;
+    padding: 50px 45px 30px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
